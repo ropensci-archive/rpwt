@@ -13,3 +13,9 @@ pwt_GET <- function(endpt, args, ...){
   res <- content(tt, "text")
   XML::xmlParse(res)
 }
+
+get_meta <- function(x){
+  toget <- c('requestId','returnCode')
+  vals <- t(sapply(toget, function(z) xpathSApply(x, sprintf("//%s", z), xmlValue)))
+  data.frame(vals, stringsAsFactors = FALSE)
+}

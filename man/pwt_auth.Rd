@@ -5,6 +5,13 @@
 \usage{
 pwt_auth(user, key, ...)
 }
+\arguments{
+\item{user}{Your PWT user name, probably your email address}
+
+\item{key}{Your PWT api key.}
+
+\item{...}{Further args passed to \code{httr::GET}}
+}
 \description{
 Tests that a user can be authenticated
 }
