@@ -1,0 +1,19 @@
+Package: rpwt
+Title: R client for Pensoft Writing Tool.
+Description: R client for Pensoft Writing Tool.
+Version: 0.0.1.99
+Date: 2014-09-17
+Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"),
+    email = "myrmecocystus@gmail.com")
+License: MIT + file LICENSE
+URL: https://github.com/ropensci/rpwt
+BugReports: http://www.github.com/ropensci/rpwt/issues
+LazyLoad: true
+LazyData: true
+Imports:
+    httr,
+    XML
+Suggests:
+    testthat,
+    roxygen2,
+    knitr
