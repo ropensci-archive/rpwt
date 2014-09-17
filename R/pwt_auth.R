@@ -2,9 +2,14 @@
 #' 
 #' @examples
 #' library('httr')
-#' user <- "myrmecocystus@gmail.com"
-#' key <- 'afed2e05c0e27c2935d23f89df8a781b'
+#' user <- "myrmecocystus@@gmail.com"
+#' key <- getOption('pwtapikey')
 #' pwt_auth(user, key)
+#' pwt_auth(user, key, config=verbose())
 pwt_auth <- function(user, key, ...){
-  pwt_GET(endpt="authenticate", list(username=user, api_key=key), ...)
+  tmp <- pwt_GET(endpt="authenticate", list(username=user, api_key=key), ...)
+  xpathSApply(tmp, "//requestId", xmlValue)
+  toget <- c('requestId','returnCode','authentication_result')
+  vals <- t(sapply(toget, function(z) xpathSApply(tmp, sprintf("//%s", z), xmlValue)))
+  data.frame(vals, stringsAsFactors = FALSE)
 }
