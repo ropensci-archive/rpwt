@@ -1,4 +1,4 @@
-#' Tests that a user can be authenticated
+#' Get list of journals that you can submit to
 #' 
 #' @export
 #' @param ... Further args passed to \code{httr::GET} 

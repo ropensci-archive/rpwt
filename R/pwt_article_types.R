@@ -1,4 +1,4 @@
-#' Tests that a user can be authenticated
+#' Get article types
 #' 
 #' @export
 #' @param journal Journal abbreviation, see \code{pwt_journals} for options.
