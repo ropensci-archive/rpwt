@@ -12,7 +12,9 @@ pwt_journals(...)
 Tests that a user can be authenticated
 }
 \examples{
+\donttest{
 pwt_journals()
 pwt_journals(config=verbose())
+}
 }
 

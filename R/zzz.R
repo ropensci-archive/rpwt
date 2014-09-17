@@ -1,7 +1,7 @@
 #' Wrapper GET function
 #' 
-#' @importFrom httr GET
-#' @importFrom XML xmlParse
+#' @importFrom httr GET content
+#' @importFrom XML xmlParse xpathSApply xmlValue xmlToDataFrame
 #' @param endpt Endpoint to construct URL for.
 #' @param args Named list of args passed to \code{query} parameter in \code{httr::GET} call
 #' @param ... Further args passed to \code{httr::GET}

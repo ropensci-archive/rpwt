@@ -14,7 +14,9 @@ pwt_article_types(journal = "bdj", ...)
 Tests that a user can be authenticated
 }
 \examples{
+\donttest{
 pwt_article_types()
 pwt_article_types(config=verbose())
+}
 }
 

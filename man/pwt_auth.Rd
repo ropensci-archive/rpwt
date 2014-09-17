@@ -16,10 +16,12 @@ pwt_auth(user, key, ...)
 Tests that a user can be authenticated
 }
 \examples{
+\donttest{
 library('httr')
 user <- "myrmecocystus@gmail.com"
 key <- getOption('pwtapikey')
 pwt_auth(user, key)
 pwt_auth(user, key, config=verbose())
+}
 }
 

@@ -2,9 +2,10 @@
 #' 
 #' @export
 #' @param ... Further args passed to \code{httr::GET} 
-#' @examples
+#' @examples \donttest{
 #' pwt_journals()
 #' pwt_journals(config=verbose())
+#' }
 pwt_journals <- function(...){
   tmp <- pwt_GET(endpt="list_journals", list(), ...)
   meta <- get_meta(tmp)
