@@ -3,6 +3,7 @@
 #' @export
 #' @param user Your PWT user name, probably your email address
 #' @param key Your PWT api key. 
+#' @param xml An xml string
 #' @param ... Further args passed to \code{httr::GET}
 #' @examples \donttest{
 #' pwt_validate()

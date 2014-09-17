@@ -10,6 +10,8 @@ pwt_validate(user, key, xml, ...)
 
 \item{key}{Your PWT api key.}
 
+\item{xml}{An xml string}
+
 \item{...}{Further args passed to \code{httr::GET}}
 }
 \description{
